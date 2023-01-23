@@ -1,0 +1,10 @@
+.hidden {
+  display: none;
+}
+
+.notes {
+  width: 200px;
+  height: 300px;
+  color: red;
+  margin: 80px;
+}
