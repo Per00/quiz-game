@@ -1,15 +1,36 @@
 class Game {
   constructor() {
-    this.questions = 5;
-    this.question1 = 1;
-    this.question2 = 2;
-    this.question3 = 3;
-    this.question4 = 4;
-    this.question5 = 5;
-  }
+    this.perguntas = [
+      {
+        Pergunta: "Qual a marca de automoveis mais segura do mundo ?",
+        A: "Ford",
+        B: "Peugeot",
+        C: "Volvo",
+        D: "VolksWagen",
+      },
 
+      {
+        Pergunta: "Qual a marca de automoveis mais segura do mundo ?",
+        A: "Ford",
+        B: "Peugeot",
+        C: "Volvo",
+        D: "VolksWagen",
+      },
+
+      {
+        Pergunta: "Qual a marca de automoveis mais segura do mundo ?",
+        A: "Ford",
+        B: "Peugeot",
+        C: "Volvo",
+        D: "VolksWagen",
+      },
+    ];
+    //for (let i = 0; i < this.perguntas.length; i++) {
+    //console.log(this.perguntas[i].Pergunta);
+    //}
+  }
   genBoard(boardQuiz) {
-    for (let i = 0; i < this.questions; i++) {
+    for (let i = 0; i < this.perguntas; i++) {
       const notes = document.createElement("div");
       notes.classList.add("notes");
 
