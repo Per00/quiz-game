@@ -3,8 +3,16 @@
 }
 
 .notes {
-  width: 200px;
-  height: 300px;
-  color: red;
-  margin: 80px;
+  width: 100%;
+  height: 500px;
+  background-color: red;
+}
+
+#Board-quiz {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
 }
