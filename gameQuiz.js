@@ -106,8 +106,8 @@ class Game {
     //atribuindo ao board
   }
   check(event) {
+    let buttonClicked = event.target;
+    console.log(buttonClicked.innerText);
     console.log("cliquei em uma opção");
-    console.log(event.target);
-    //console.log(event.target.innerText)
   }
 }
