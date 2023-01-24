@@ -74,7 +74,6 @@ class Game {
     card.classList.add("card");
     //criando uma div e uma classe para ela
     let h1 = document.createElement("h1");
-
     let btn1 = document.createElement("button");
     btn1.classList.add("btn1");
     let btn2 = document.createElement("button");
@@ -84,39 +83,31 @@ class Game {
     let btn4 = document.createElement("button");
     btn4.classList.add("btn4");
     //criando elementos, para a div criada anteriormente
-
-    //let allButtons = ["btn1", "btn2", "btn3", "btn4"];
-    // for (let i = 0; i < allButtons.length; i++) {
-    // allButtons[i].addEventListener("click", () => {
-    //   div.classList.add();
-    // });
-    // }
-
+    let allButtons = [btn1, btn2, btn3, btn4];
+    for (let i = 0; i < allButtons.length; i++) {
+      allButtons[i].addEventListener("click", (e) => {
+        this.check(e);
+      });
+    }
     h1.innerText = this.question.question;
     btn1.innerText = this.question.A;
     btn2.innerText = this.question.B;
     btn3.innertext = this.question.C;
     btn4.innerText = this.question.D;
     //colocando as perguntas e as respostas dentro dos elementos
-
     card.appendChild(h1);
     card.appendChild(btn1);
     card.appendChild(btn2);
     card.appendChild(btn3);
     card.appendChild(btn4);
     //atribuindo ao card
-    //console.log(board);
+
     board.appendChild(card);
     //atribuindo ao board
   }
-
-  check() {
-    let allButtons = ["btn1", "btn2", "btn3", "btn4"];
-    for (let i = 0; i < allButtons.length; i++) {
-      allButtons[i].addEventListener("click", () => {
-        div.classList.add();
-        console.log(allButtons);
-      });
-    }
+  check(event) {
+    console.log("cliquei em uma opção");
+    console.log(event.target);
+    //console.log(event.target.innerText)
   }
 }
