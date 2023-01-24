@@ -2,7 +2,7 @@ class Game {
   constructor() {
     this.perguntas = [
       {
-        Pergunta: "Qual a marca de automoveis mais segura do mundo ?",
+        question: "Qual a marca de automoveis mais segura do mundo ?",
         A: "Ford",
 
         B: "Peugeot",
@@ -14,7 +14,7 @@ class Game {
       },
 
       {
-        Pergunta:
+        question:
           "Qual a marca de automoveis que criou o dispositivo de segurança (cinto de 3 pontos), e liberou a patente para as outras marcas ?",
         A: "GeneralMotors",
 
@@ -27,7 +27,7 @@ class Game {
       },
 
       {
-        Pergunta: "Quem desenvolveu o primeiro automóvel ?",
+        question: "Quem desenvolveu o primeiro automóvel ?",
         A: "Pedro Henrique",
 
         B: "Enzo Ferrari",
@@ -39,7 +39,7 @@ class Game {
       },
 
       {
-        Pergunta: "Qual é a marca de carros que mais vende no mundo? ",
+        question: "Qual é a marca de carros que mais vende no mundo? ",
         A: "Toyota",
 
         B: "Honda",
@@ -51,7 +51,7 @@ class Game {
       },
 
       {
-        Pergunta: "Qual o carro mais caro já vendido no mundo (até 2022) ?",
+        question: "Qual o carro mais caro já vendido no mundo (até 2022) ?",
         A: "Ferrari LaFerrari",
 
         B: "Bugatti La Voiture Noire",
@@ -64,7 +64,7 @@ class Game {
       },
     ];
     this.round = 0;
-    this.Pergunta = this.perguntas[this.round];
+    this.question = this.perguntas[this.round];
 
     //console.log(this.perguntas[i].Pergunta);
     //}
@@ -72,24 +72,29 @@ class Game {
   genBoard(board) {
     const card = document.createElement("div");
     card.classList.add("card");
+    //criando uma div e uma classe para ela
     let h1 = document.createElement("h1");
     let btn1 = document.createElement("button");
     let btn2 = document.createElement("button");
     let btn3 = document.createElement("button");
     let btn4 = document.createElement("button");
+    //criando elementos, para a div criada anteriormente
 
-    h1.innerText = this.perguntas.Pergunta;
-    btn1.innerText = this.Pergunta.A;
-    btn2.innerText = this.Pergunta.B;
-    btn3.innertext = this.Pergunta.C;
-    btn4.innerText = this.Pergunta.D;
+    h1.innerText = this.perguntas.question;
+    btn1.innerText = this.question.A;
+    btn2.innerText = this.question.B;
+    btn3.innertext = this.question.C;
+    btn4.innerText = this.question.D;
+    //colocando as perguntas e as respostas dentro dos elementos
 
     card.appendChild(h1);
     card.appendChild(btn1);
     card.appendChild(btn2);
     card.appendChild(btn3);
     card.appendChild(btn4);
+    //atribuindo ao card
 
     board.appendChild(card);
+    //atribuindo ao board
   }
 }
