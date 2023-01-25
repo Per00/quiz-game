@@ -92,7 +92,7 @@ class Game {
     h1.innerText = this.question.question;
     btn1.innerText = this.question.A;
     btn2.innerText = this.question.B;
-    btn3.innertext = this.question.C;
+    btn3.innerText = this.question.C;
     btn4.innerText = this.question.D;
     //colocando as perguntas e as respostas dentro dos elementos
     card.appendChild(h1);
@@ -107,6 +107,13 @@ class Game {
   }
   check(event) {
     let buttonClicked = event.target;
+    for (let i = 0; i < buttonClicked.length; i++) {
+      if (buttonClicked[i] === this.perguntas[question][correct]) {
+        console.log(buttonClicked[i]);
+      } else {
+        console.log(buttonClicked);
+      }
+    }
     console.log(buttonClicked.innerText);
     console.log("cliquei em uma opção");
   }
