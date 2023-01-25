@@ -116,6 +116,7 @@ class Game {
     // buttonClicked.classList.add("clicked");
     console.log(buttonClicked.innerText); // opção que foi clicada
     console.log(this.question.correct);
+
     if (buttonClicked.innerText === this.question.correct) {
       console.log("a pergunta clicada está igual a pergunta correct");
       this.nextQuestion();
@@ -127,13 +128,19 @@ class Game {
   nextQuestion() {
     this.round++; // está mudando de 0 para 1
     if (this.round === this.perguntas.length) {
+      //esta indo até a ultima pergunta e parando de gerar
       this.endGame();
       return;
     }
     this.question = this.perguntas[this.round]; // está mudando a pergunta
-    this.board.innerText = "";
+    this.board.innerText = ""; // está apagando a pergunta anterior
     this.genBoard(this.board); // está gerando meu board novamene, com uma nova pergunta
   }
 
-  endGame() {}
+  endGame() {
+    let imgFinal = document.createElement("img");
+    imgFinal.setAttribute("src", "./imagens/carroFinal.jpg");
+    this.board.innerText = "";
+    this.board.appendChild(imgFinal);
+  }
 }
