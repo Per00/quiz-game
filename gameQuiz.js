@@ -82,7 +82,7 @@ class Game {
     btn3.classList.add("btn3");
     let btn4 = document.createElement("button");
     btn4.classList.add("btn4");
-    //criando elementos, para a div criada anteriormente
+    //criando elementos e classes, para a div criada anteriormente
     let allButtons = [btn1, btn2, btn3, btn4];
     for (let i = 0; i < allButtons.length; i++) {
       allButtons[i].addEventListener("click", (e) => {
@@ -107,14 +107,18 @@ class Game {
   }
   check(event) {
     let buttonClicked = event.target;
+
     for (let i = 0; i < buttonClicked.length; i++) {
       if (buttonClicked[i] === this.perguntas[question][correct]) {
-        console.log(buttonClicked[i]);
+        return;
+        //console.log(buttonClicked[i]);
       } else {
         console.log(buttonClicked);
       }
     }
     console.log(buttonClicked.innerText);
-    console.log("cliquei em uma opção");
+    //console.log("cliquei em uma opção");
+
+    //buttonClicked.classList.add("clicked");
   }
 }
