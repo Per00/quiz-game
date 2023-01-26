@@ -58,10 +58,6 @@
   width: 99vw;
   background-size: cover;
 }
-div {
-  height: 100vh;
-  width: 100vh;
-}
 
 .btn1 {
   font-size: 18px;
@@ -141,8 +137,4 @@ div {
   text-shadow: 0 1px 0 rgba(150, 4, 4, 0.4);
   transition: box-shadow 0.15s ease, transform 0.15s ease;
   margin: 3px;
-}
-
-div {
-  background-color: #000000;
 }
