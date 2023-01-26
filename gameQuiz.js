@@ -66,6 +66,7 @@ class Game {
     this.round = 0;
     this.question = this.perguntas[this.round];
     this.board = null;
+    //criando as perguntas, as respotas e as respostas corretas
 
     //console.log(this.perguntas[i].Pergunta);
   }
@@ -140,7 +141,9 @@ class Game {
   endGame() {
     let imgFinal = document.createElement("img");
     imgFinal.setAttribute("src", "./imagens/carroFinal.jpg");
+    imgFinal.classList.add("finalImg");
     this.board.innerText = "";
     this.board.appendChild(imgFinal);
+    // criando uma tag de img e colocando um atributo src. para a imagem final que será mostrada quando as perguntas acabarem
   }
 }
